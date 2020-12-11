@@ -1,277 +1,106 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
 <title>
-
 Paragraph Merger
-
 </title>
-
 <link rel="stylesheet" type="text/css" href="style.css">
-
 </head>
-
 <body>
-
+<hr>
 Paragraph Merger
-
+<hr>
     <div>
-
 <span>
-
     <br>
-
-    <hr>
-    
-    <br>
-
-    <hr>
-
-    <br>
-
+   
 <span>
-
 1.
-
 </span>
-
 <input type="text" id="div1_input_box_1" placeholder="Type the first sentence">
-
 <br>
-
-<br>
-
 <span>
-
+<hr>
     2.
-    
     </span>
-    
     <input type="text" id="div1_input_box_2" placeholder="Type the second sentence">
-    
     <br>
-    
-    <br>
-
     <span>
-
+        <hr>
         3.
-        
         </span>
-        
         <input type="text" id="div1_input_box_3" placeholder="Type the third sentence">
-        
         <br>
-        
-        <br>
-        
         <span>
-
+            <hr>
             4.
-            
             </span>
-            
             <input type="text" id="div1_input_box_4" placeholder="Type the fourth sentence">
-         
             <br>
-
-            <hr>
-            
-            <br>
-
-            <hr>
-
-            <br>
-
             <button onclick="get_para1()">
-            
             Get Paragraph 1
-            
             </button>
-
             </span>
- 
             <br>
-
-            <hr>
-            
+            <hr>           
             <br>
-
-            <hr>
-
-            <br>
-
-            <span>
-                  
-                <span>
-                
-                1.
-                
-                </span>
-                
-                <input type="text" id="div2_input_box_1" placeholder="Type the first sentence">
-                
-                
-                <br>
-
-                <hr>
-                
-                <br>
-
-                <hr>
-
-                <br>
-
-                
-                <span>
-                
-                    2.
-                    
-                    </span>
-                    
-                    <input type="text" id="div2_input_box_2" placeholder="Type the second sentence">
-                   
+            <span>                 
+                <span> 
+                    <hr>              
+                1.               
+                </span>               
+                <input type="text" id="div2_input_box_1" placeholder="Type the first sentence">                            
+                <br>              
+                <span>  
+                    <hr>            
+                    2.                  
+                    </span>                    
+                    <input type="text" id="div2_input_box_2" placeholder="Type the second sentence">                   
                     <br>
-
-                    <hr>
-                    
-                    <br>
-
-                    <hr>
-
-                    <br>
-
-                    <span>
-                
-                        3.
-                        
-                        </span>
-                        
-                        <input type="text" id="div2_input_box_3" placeholder="Type the third sentence">
-                       
+                    <span>  
+                        <hr>              
+                        3.                        
+                        </span>                        
+                        <input type="text" id="div2_input_box_3" placeholder="Type the third sentence">                       
                         <br>
-
-                        <hr>
-                        
-                        <br>
-
-                        <hr>
-
-                        <br>
-
                         <span>
-                
-                            4.
-                            
+                            <hr>
+                            4.                           
+                            </span>                            
+                            <input type="text" id="div2_input_box_4" placeholder="Type the fourth sentence">                          
+                        <br>
+                            <button onclick="get_para2()">                            
+                            Get Paragraph 2                            
+                            </button>                             
+                        <br>            
                             </span>
-                            
-                            <input type="text" id="div2_input_box_4" placeholder="Type the fourth sentence">
-                          
-                        <br>
-
-                        <hr>
-                        
-                        <br>
-
-                        <hr>
-
-                        <br>
-
-                            <button onclick="get_para2()">
-                            
-                            Get Paragraph 2
-                            
-                            </button>
-
-                             
-                        <br>
-
-                        <hr>
-                        
-                        <br>
-
-                        <hr>
-
-                        <br>
-
-                
-                            </span>
-
                         </div>
-
-                        <hr>
-
-                        <hr>
-
-                        <hr>
-
-                        <hr>
-
-                        <div id="para_1_read"></div>
-                        
+                        <div><h1 id="para_1_read"></h1></div>                    
                         <br>
-
-                        <hr>
-                        
-                        <br>
-
-                        <hr>
-
-                        <br>
-
+                        <hr>                       
                         <div id="para_2_read"></div>
-
 </body>
-
 <script>
-
 var inputs_1 = [];
-
 function getParagraph1() 
-
 {
-
 for(var i = 1 ; i <=4 ; i++)
-
 {
-
-    push = inputs_1
-
+    push_1 = inputs_1;
     inputs_1.push(document.getElementById("div1_input_box_" + i).value); 
-
-    push.push(inputs_1);
-
- }
- 
+}
  document.getElementById("para_1_read").innerHTML = inputs_1.join(". ");
-
- }
-
+}
 var inputs_2 = [];
-
  function getParagraph2() 
-
 {
-
 for(var i = 1 ; i <=4 ; i++)
-
 {
-
     push2 = inputs_2;
-
     inputs_2.push(document.getElementById("div2_input_box_" + i).value); 
-
     push2.push(inputs_2);
-
- }
- 
+}
  document.getElementById("para_2_read").innerHTML = inputs_2.join(". ");
-
- }
-
+}
 </script>
-
 </html>
